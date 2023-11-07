@@ -4,13 +4,258 @@
 {% block title %}Home{% endblock %}
 {% block body %}
 
-    <br>
-    <div class="d-flex justify-content-around">
-        <img src="{% static 'portfolio/rick and morty.jpg' %}" alt="img">
-        
+<section class="about">
+  <div class="container about__container--narrow">
+    <div class="page-section">
+      <h2 class="page-section__title">ABOUT ME</h2>
+        <img class="page-section__title-style" src="{% static 'portfolio/img/title-style.png' %}" alt="">
+        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <div class="row gutters-80">
+          <div class="col-md-4">
+            <div class="about__image">
+              <img src="{% static 'portfolio/img/about-me-image.png' %}" alt="">
+            </div>
+          </div>
+          <div class="col-md-8 about__content">
+            <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <div class="row row--margin-top">
+              <div class="col-md-4">
+                <p class="about__bio"><strong>NAME :</strong> BEN-DAVID C. SAMUEL</p>
+                <p class="about__bio"><strong>AGE :</strong> 23</p>
+              </div>
+              <div class="col-md-4">
+                <p class="about__bio"><strong>JOB TITLE :</strong> SOFTWARE DEVELOPER</p>
+                <p class="about__bio"><strong>LOCATION :</strong> ENUGU,NIGERIA</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <a class="button button--colorful button--margin" href="#">GET RESUME</a>
+              </div>
+              <div class="col-md-4">
+                <a class="button button--colorful button--margin" href="#">HIRE ME</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-    <br> <br>
-    {% for project in projects %}
+  </div>
+</section>
+
+<section class="service">
+    <div class="container">
+      <div class="page-section">
+        <h2 class="page-section__title">MY SERVICES</h2>
+        <img class="page-section__title-style" src="{% static 'portfolio/img/title-style.png' %}" alt="">
+        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <div class="row gutters-70">
+          <div class="col-md-4">
+            <div class="thumbnail text-center">
+              <img src="{% static 'portfolio/img/logo-design.png' %}" alt="">
+              <h4 class="service__single-section__title">LOGO DESIGN</h4>
+              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail text-center">
+              <img src="{% static 'portfolio/img/website-design.png' %}" alt="">
+              <h4 class="service__single-section__title">WEBSITE DESIGN</h4>
+              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail text-center">
+              <img src="{% static 'portfolio/img/support.png' %}" alt="">
+              <h4 class="service__single-section__title">SUPPORT</h4>
+              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section> 
+
+<section class="skill skill--bg">
+  <div class="container skill__container--narrow">
+    <div class="page-section">
+      <h2 class="page-section__title page-section__title--white">MY SKILL</h2>
+      <img class="page-section__title-style" src="{% static 'portfolio/img/title-style-white.png' %}" alt="">
+      <p class="page-section__paragraph page-section__paragraph--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="row gutters-60">
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img src="{% static 'portfolio/img/adobe-photoshop.png' %}" alt="">
+            <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7FB7FA;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img src="{% static 'portfolio/img/adobe-illustrator.png' %}" alt="">
+            <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width:80%;background-color: #FFAC1B;;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img src="{% static 'portfolio/img/adobe-after-effects.png' %}" alt="">
+            <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width:80%;background-color: #C99AFF;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <div class="container">
+    <div class="page-section">
+      <h2 class="page-section__title">MY PORTFOLIO</h2>
+      <img class="page-section__title-style" src="{% static 'portfolio/img/title-style.png' %}" alt="">
+      <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+      <div class="row gutters-40">
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-a category-b category-c" data-order="1">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-1.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>LOGO DESIGN</h4>
+                <p>Designer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-a category-c" data-order="2">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-2.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>WEBSITE DESIGN</h4>
+                <p>Designer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-c" data-order="3">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-3.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>LOGO DESIGN</h4>
+                <p>Designer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gutters-40">
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-b category-d" data-order="4">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-4.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>PHOTOGRAPHY</h4>
+                <p>photographer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-b category-d" data-order="5">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-5.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>WEBSITE DESIGN</h4>
+                <p>Designer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio__single-section mix category-d" data-order="6">
+            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-6.png' %}" alt="">
+            <div class="portfolio__single-section__overlay">
+              <div class="overlay-content">
+                <h4>LOGO DESIGN</h4>
+                <p>Designer</p>
+              </div>
+              <div class="portfolio__single-section__search-icon">
+                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <div class="page-section">
+      <h2 class="page-section__title">BLOG POST</h2>
+      <img class="page-section__title-style" src="{% static 'portfolio/img/title-style.png' %}" alt="">
+      <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="row gutters-40">
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img class="img-responsive" src="{% static 'portfolio/img/blog-1.png' %}" alt="">
+            <p class="blog__single__date">MAY 25 , 2017 </p>
+            <i class="material-icons">comment</i> 5
+            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
+            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img src="{% static 'portfolio/img/blog-2.png' %}" alt="">
+            <p class="blog__single__date">MAY 25 , 2017 </p>
+            <i class="material-icons">comment</i> 5
+            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
+            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail text-center">
+            <img src="{% static 'portfolio/img/blog-3.png' %}" alt="">
+            <p class="blog__single__date">MAY 25 , 2017 </p>
+            <i class="material-icons">comment</i> 5
+            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
+            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    {% comment %} {% for project in projects %}
         <div class="row" style="text-align: center ; float: left; padding-right: 25px ; padding-left: 25px;">
             <div class="column">
                 <img src="{% static 'portfolio/rick and morty.jpg' %}" alt="img">
@@ -20,17 +265,5 @@
                 </div>
             </div>
         </div>
-    {% endfor %}
-
-<!--    <br>
-    {% for project in projects %}
-        <div class="d-flex justify-content-around">
-            <h1>{{ project.title }}</h1>
-            <br>
-            <p>{{ project.description }}</p>
-
-        </div>
-    
-    {% endfor %}-->
-
+    {% endfor %} {% endcomment %}
 {% endblock %}
