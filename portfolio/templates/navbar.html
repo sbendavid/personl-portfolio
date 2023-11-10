@@ -7,14 +7,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span> 
         </button>
-        <a class="navbar-brand" href="#">BD</a>
+        <a class="navbar-brand" href="{% url 'portfolio:home' %}">BD</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="#">HOME</a></li>
+          <li><a href="{% url 'portfolio:home' %}">HOME</a></li>
           <li><a href="#">RESUME</a></li>
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="{% url 'blog:post_list' %}">BLOG</a></li>
+          <li><a href="{% url 'portfolio:contact' %}">CONTACT</a></li>
         </ul>
       </div>
     </nav>
@@ -26,7 +26,7 @@
         <li>WEB DEVELOPER <span class="padding">&#45;</span></li>
         <li>PYTHON DEVELOPER</li>
       </ul>
-      <a class="header__button" href="#">HAVE PROJECT? LET'S TALK</a>
+      <a class="header__button" href="{% url 'portfolio:contact' %}">HAVE PROJECT? LET'S TALK</a>
     </div>
     <div class="social-icon pull-right">
       <ul>

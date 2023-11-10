@@ -41,6 +41,10 @@ INSTALLED_APPS = [
 
     'blog',
     'portfolio',
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +85,10 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio',
+        'USER': 'admin',
+        'PASSWORD': 'Password@1',
     }
 }
 
@@ -132,3 +138,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # New settings
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'your_account@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1
