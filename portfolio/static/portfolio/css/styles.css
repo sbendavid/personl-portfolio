@@ -2,21 +2,21 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url(../assets/fonts/Roboto-Regular.ttf);
+  src: url(/static/portfolio/assets/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url(../assets/fonts/Roboto-Bold.ttf);
+  src: url(/static/portfolio/assets/fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Roboto-Light';
   font-style: normal;
   font-weight: 300;
-  src: url(../assets/fonts/Roboto-Light.ttf);
+  src: url(/static/portfolio/assets/fonts/Roboto-Light.ttf);
 }
 
 body{
@@ -47,7 +47,7 @@ a:hover, a:focus{
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(../assets/iconfont/MaterialIcons-Regular.ttf);
+  src: url(/static/portfolio/assets/iconfont/MaterialIcons-Regular.ttf);
 }
 
 .material-icons {
@@ -78,7 +78,7 @@ html,body {
 }
 
 .header--bg{
-  background: url("../assets/images/header-background.png") no-repeat;
+  background: url('/static/portfolio/img/header-background.png') no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -165,7 +165,7 @@ html,body {
   font-size: 25px;
   font-family: Roboto-Light;
   font-weight: bold;
-  background: url("../assets/images/logo.png") no-repeat;
+  background: url("/static/portfolio/img/logo.png") no-repeat;
   padding-left: 45px;
   background-position: left center;
 }
@@ -326,7 +326,7 @@ html,body {
 }
 
 .skill--bg{
-  background: url("../assets/images/skill-background.png") no-repeat;
+  background: url("/static/portfolio/img/skill-background.png") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -422,7 +422,7 @@ html,body {
 }
 
 .overview--bg{
-  background: url("../assets/images/overview-background.png") no-repeat;
+  background: url("/static/portfolio/img/overview-background.png") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -564,7 +564,7 @@ html,body {
 }
 
 .slider--bg{
-  background: url("../assets/images/slider-background.png") no-repeat;
+  background: url("/static/portfolio/img/slider-background.png") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -822,7 +822,7 @@ html,body {
 }
 
 .brand-logo--bg{
-  background: url("../assets/images/brand-logo-background.png") no-repeat;
+  background: url("/static/portfolio/img/brand-logo-background.png") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;

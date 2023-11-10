@@ -12,3 +12,5 @@ def home(request):
 def resume(request):
     return render(request, "portfolio/resume.html")
 
+def contact(request):
+    return render(request, "portfolio/contact.html")
