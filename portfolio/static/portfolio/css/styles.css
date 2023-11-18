@@ -150,7 +150,7 @@ html,body {
 }
 
 .navbar-nav {
-  margin: 0px -20px;
+  margin: 0px -50px;
 }
 
 .navbar-toggle{
@@ -990,4 +990,47 @@ html,body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.contact-us-popup-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-us-popup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-popup-form input {
+  margin-bottom: 10px;
+}
+
+.contact-us-popup-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-us-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }

@@ -1,27 +1,9 @@
-// Get references to the overlay and buttons
-document.addEventListener("DOMContentLoaded", function() {
-    const contactOverlay = document.getElementById("contactOverlay");
-    const openContactButton = document.getElementById("openContactButton");
-    const closeContactButton = document.getElementById("closeContactButton");
+// Open the contact us popup when the user clicks the contact us link
+document.querySelector('a[href="#contact-us"]').addEventListener('click', function() {
+    document.querySelector('.contact-us-popup').style.display = 'block';
+    });
 
-    // Function to open the Contact Us form
-    function openContactForm() {
-        contactOverlay.style.display = "block";
-    }
-
-    // Function to close the Contact Us form
-    function closeContactForm() {
-        contactOverlay.style.display = "none";
-    }
-
-    // Event listeners for opening and closing the Contact Us form
-    openContactButton.addEventListener("click", openContactForm);
-    closeContactButton.addEventListener("click", closeContactForm);
-});
-
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+    // Close the contact us popup when the user clicks the close button
+    document.querySelector('.contact-us-popup-close').addEventListener('click', function() {
+    document.querySelector('.contact-us-popup').style.display = 'none';
+    });
