@@ -1,28 +1,28 @@
 <header class="header header--bg">
   <div class="container">    
-        <nav class="navbar">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button aria-label="Subject line" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{% url 'portfolio:home' %}"> </a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'portfolio:home' %}">HOME</a></li>
-                <li><a href="#">RESUME</a></li>
-                <li><a href="{% url 'blog:post_list' %}">BLOG</a></li>
-                <li><a href="{% url 'portfolio:contact' %}">CONTACT</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>        
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button aria-label="Subject line" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'portfolio:home' %}"> </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'portfolio:home' %}">HOME</a></li>
+            <li><a href="#">RESUME</a></li>
+            <li><a href="{% url 'blog:post_list' %}">BLOG</a></li>
+            <li><a href="{% url 'portfolio:contact' %}" id="contactLink">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>        
 
-    {% if request.resolver_match.url_name != 'portfolio:home' %}
-      <div class="header__content text-center">
+    {% if request.resolver_match.url_name != 'contact' %}
+      <div class="header__content text-center" id="headerContent">
         <span class="header__content__block">HELLO</span>
         <h1 class="header__content__title">I'M BEN-DAVID C. SAMUEL</h1>
         <ul class="header__content__sub-title">
@@ -32,7 +32,10 @@
         </ul>
         <a class="header__button" href="{% url 'portfolio:contact' %}">HAVE PROJECT? LET'S TALK</a>
       </div>
-      <div class="social-icon pull-right">
+    {% endif %}
+
+    {% if request.resolver_match.url_name != 'contact' %}
+      <div class="social-icon pull-right" id="socialIcon">
         <ul>
           <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
           <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>

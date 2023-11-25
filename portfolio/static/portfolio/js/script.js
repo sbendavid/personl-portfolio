@@ -48,3 +48,20 @@ $(".contact-form")
             );
     }
 });
+
+
+$(document).ready(function() {
+  // Hide the header content initially
+  $("#headerContent").hide();
+
+  // Add a click event listener to the "CONTACT" link
+  $("a[href$='portfolio:contact']").click(function(e) {
+    e.preventDefault(); // Prevent the default behavior of the link
+
+    // Toggle the visibility of the header content
+    $("#headerContent").toggle();
+
+    // Optionally, you can also close the navbar if it's open
+    $(".navbar-collapse").collapse('hide');
+  });
+});
