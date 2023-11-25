@@ -1,3 +1,5 @@
+{% load static %}
+
 <header class="header header--bg">
   <div class="container">    
     <nav class="navbar">
@@ -13,7 +15,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{% url 'portfolio:home' %}">HOME</a></li>
-            <li><a href="#">RESUME</a></li>
+            <li><a href="{% static 'portfolio/img/Ben-David\'s Resume.pdf' %}">RESUME</a></li>
             <li><a href="{% url 'blog:post_list' %}">BLOG</a></li>
             <li><a href="{% url 'portfolio:contact' %}" id="contactLink">CONTACT</a></li>
           </ul>

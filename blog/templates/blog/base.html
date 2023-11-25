@@ -27,18 +27,19 @@
 
         {% include "blog/navbar.html" %}
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-
-                <div class="col-lg-4">        
-                    {% include "blog/sidebar.html" %}
+        <section class="blog-posts grid-system">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-lg-4">        
+                        {% include "blog/sidebar.html" %}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         {% include "blog/footer.html" %}
 
@@ -54,6 +55,17 @@
         <script src="{% static '/blog/js/slick.js' %}"></script>
         <script src="{% static '/blog/js/isotope.js' %}"></script>
         <script src="{% static '/blog/js/accordions.js' %}"></script>
+
+        <script language = "text/Javascript"> 
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t){                   //declaring the array outside of the
+            if(! cleared[t.id]){                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value='';         // with more chance of typos
+                t.style.color='#fff';
+                }
+            }
+          </script>
 
     </body>
 </html>
