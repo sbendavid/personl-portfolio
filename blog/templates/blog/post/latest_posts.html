@@ -3,7 +3,7 @@
     <li>
         <a href="{{ post.get_absolute_url }}">
           <h5>{{ post.title }}</h5>
-          <span>{{ post.publish }}</span>
+          <span>{{ post.publish|date:"F d, Y" }}</span>
       </a>
     </li>
     {% endfor %}

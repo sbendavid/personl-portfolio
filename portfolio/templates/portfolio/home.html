@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load blog_tags %}
 
 {% block title %}Home{% endblock %}
 {% block body %}
@@ -32,10 +33,10 @@
             </div>
             <div class="row">
               <div class="col-md-4">
-                <a class="button button--colorful button--margin" href="#">GET RESUME</a>
+                <a class="button button--colorful button--margin" href="{% static 'portfolio/img/Ben-David\'s Resume.pdf' %}">GET RESUME</a>
               </div>
               <div class="col-md-4">
-                <a class="button button--colorful button--margin" href="#">HIRE ME</a>
+                <a class="button button--colorful button--margin" href="{% url 'portfolio:contact' %}">HIRE ME</a>
               </div>
             </div>
           </div>
@@ -266,50 +267,6 @@
           </div>
         </div>
       </div>
-      <div class="row gutters-40">
-        <div class="col-md-4">
-          <div class="portfolio__single-section mix category-b category-d" data-order="4">
-            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-4.png' %}" alt="">
-            <div class="portfolio__single-section__overlay">
-              <div class="overlay-content">
-                <h4>PHOTOGRAPHY</h4>
-                <p>photographer</p>
-              </div>
-              <div class="portfolio__single-section__search-icon">
-                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="portfolio__single-section mix category-b category-d" data-order="5">
-            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-5.png' %}" alt="">
-            <div class="portfolio__single-section__overlay">
-              <div class="overlay-content">
-                <h4>WEBSITE DESIGN</h4>
-                <p>Designer</p>
-              </div>
-              <div class="portfolio__single-section__search-icon">
-                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="portfolio__single-section mix category-d" data-order="6">
-            <img class="portfolio__single-section__image img-responsive" src="{% static 'portfolio/img/portfolio-6.png' %}" alt="">
-            <div class="portfolio__single-section__overlay">
-              <div class="overlay-content">
-                <h4>LOGO DESIGN</h4>
-                <p>Designer</p>
-              </div>
-              <div class="portfolio__single-section__search-icon">
-                <a href="#"><img src="{% static 'portfolio/img/search-icon.png' %}" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -319,35 +276,23 @@
     <div class="page-section">
       <h2 class="page-section__title">BLOG POST</h2>
       <img class="page-section__title-style" src="{% static 'portfolio/img/title-style.png' %}" alt="">
-      <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <p class="page-section__paragraph">Get the least and trending updata about your favorite thing. </p>
       <div class="row gutters-40">
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <img class="img-responsive" src="{% static 'portfolio/img/blog-1.png' %}" alt="">
-            <p class="blog__single__date">MAY 25 , 2017 </p>
-            <i class="material-icons">comment</i> 5
-            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
+        {% for post in posts %}
+          <div class="col-md-4">
+            <div class="thumbnail text-center">
+              <img class="img-responsive" src="{% static 'portfolio/img/blog-1.png' %}" alt="">
+              <p class="blog__single__date">{{ post.publish|date:"F d, Y" }}</p>
+              <i class="material-icons">comment</i> 5
+              <a href="#"><h4 class="blog__single__title">{{ post.title }}</h4></a>
+              <p class="blog__single__paragraph">{{ post.body|markdown|truncatewords_html:20 }}
+                <a href="{{ post.get_absolute_url }}">
+                  <span class="blog__single__paragraph--read-more">READ MORE...</span>
+                </a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <img src="{% static 'portfolio/img/blog-2.png' %}" alt="">
-            <p class="blog__single__date">MAY 25 , 2017 </p>
-            <i class="material-icons">comment</i> 5
-            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="thumbnail text-center">
-            <img src="{% static 'portfolio/img/blog-3.png' %}" alt="">
-            <p class="blog__single__date">MAY 25 , 2017 </p>
-            <i class="material-icons">comment</i> 5
-            <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-            <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

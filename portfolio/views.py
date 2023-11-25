@@ -1,6 +1,7 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 from .models import Project, Contact
+from blog.models import Post  # Import your Post model
 from .forms import ContactForm
 from django.core.mail import send_mail
 from .sms import send_sms
@@ -9,8 +10,10 @@ from .sms import send_sms
 
 def home(request):
     projects = Project.objects.all()
+    posts = Post.objects.all()[:3]  # Retrieve the first 3 blog posts
     return render(request, "portfolio/home.html", {
-        'projects':projects
+        'projects': projects,
+        'posts': posts,
     })
 
 def resume(request):

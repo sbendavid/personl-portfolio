@@ -15,7 +15,7 @@
                 <a href=""><h4>{{ post.title }}</h4></a>
                 <ul class="post-info">
                     <li><a href="#">{{ post.author }}</a></li>
-                    <li><a href="#">{{ post.publish }}</a></li>
+                    <li><a href="#">{{ post.publish|date:"F d, Y" }}</a></li>
                     <li><a href="#">10 Comments</a></li>
                 </ul>
                 <p>{{ post.body|markdown }}</p>

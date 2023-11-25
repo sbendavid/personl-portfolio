@@ -25,7 +25,7 @@
                                 <a href="{{ post.get_absolute_url }}"><h4>{{ post.title }}</h4></a>
                                 <ul class="post-info">
                                     <li><a href="#">{{ post.author }}</a></li>
-                                    <li><a href="#">{{ post.publish }}</a></li>
+                                    <li><a href="#">{{ post.publish|date:"F d, Y" }}</a></li>
                                     <li><a href="#">12 Comments</a></li>
                                 </ul>
                                 <p>{{ post.body|markdown|truncatewords_html:30 }}</p>
