@@ -11,7 +11,7 @@
             <div class="col-lg-6">
                 <div class="blog-post">
                     <div class="blog-thumb">
-                        <img src="assets/images/blog-thumb-01.jpg" alt="">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
                     </div>
                     <div class="down-content">
                         {% for tag in post.tags.all %}
